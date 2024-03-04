@@ -1,0 +1,261 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 30px;
+  color: #fff;
+  background-color: #333;
+}
+
+.colors {
+  height: 30vh;
+  background-image: linear-gradient(80deg, tomato, gold, royalblue, lime, royalblue, gold, tomato);
+  background-size: 800%;
+  animation: colors 3s linear infinite;
+}
+
+@keyframes colors {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+.wrapper {
+  margin: 50px;
+  text-align: center;
+  line-height: 10px;
+}
+
+.square {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 2px;
+  animation: fade 1.4s infinite;
+}
+
+.square:nth-child(2n) {
+  animation: fade 1s infinite;
+}
+
+.square:nth-child(3n) {
+  animation: fade 0.5s infinite;
+}
+
+@keyframes fade {
+  10% {
+    opacity: 1;
+    background-color: #f600ff;
+  }
+  50% {
+    opacity: 0;
+    background-color: #006bff;
+  }
+  90% {
+    opacity: 1;
+    background-color: #f600ff;
+  }
+}
+.sky {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-color: royalblue;
+  animation: sky 8s linear 1;
+}
+
+.sun {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 90px;
+  height: 90px;
+  background-color: yellow;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 50px 10px rgb(202, 139, 20);
+  animation: sun 8s linear 1;
+}
+
+.ground {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  z-index: 2;
+}
+
+.road {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(110, 103, 98);
+}
+
+.grass {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background-color: lime;
+}
+
+.car {
+  position: absolute;
+  top: -15px;
+  left: 200px;
+  height: 70px;
+  width: 150px;
+  background-color: tomato;
+  border-radius: 15px;
+  animation: car 8s linear 1;
+}
+
+.car::before,
+.car::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 35px;
+  background-color: tomato;
+}
+
+.car::after {
+  right: -20px;
+  border-top-right-radius: 10px;
+}
+
+.car::before {
+  left: -20px;
+}
+
+.wheel {
+  position: absolute;
+  bottom: -10px;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  border-radius: 50%;
+  border: 2px dashed #999;
+  animation: wheel 2s linear infinite;
+}
+
+.front-wheel {
+  right: 8px;
+  z-index: 1;
+}
+
+.rear-wheel {
+  left: 8px;
+}
+
+.window {
+  position: absolute;
+  top: 5px;
+  height: 30px;
+  width: 50px;
+  background-color: blue;
+}
+
+.front-window {
+  right: 0;
+  border-top-right-radius: 9px;
+}
+
+.rear-window {
+  left: 0;
+  border-top-left-radius: 9px;
+}
+
+@keyframes sun {
+  0% {
+    top: 850px;
+  }
+  40% {
+    top: 100px;
+  }
+  60% {
+    top: 100px;
+  }
+  100% {
+    top: 850px;
+  }
+}
+@keyframes sky {
+  0% {
+    background-color: #000;
+  }
+  40% {
+    background-color: royalblue;
+  }
+  60% {
+    background-color: royalblue;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes car {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 1300px;
+  }
+}
+@keyframes wheel {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=prosteanima.css.map */

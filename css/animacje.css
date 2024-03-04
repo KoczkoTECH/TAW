@@ -1,0 +1,175 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 30px;
+  color: #fff;
+  background-color: #333;
+}
+
+.square {
+  width: 400px;
+  height: 400px;
+  background-color: gold;
+  border: 3px solid black;
+  animation: color 2s ease-in-out 2s 1; /*podajemy o co nam chodzi a drugi parametr to czas timing-function czyli np ease, opóźnienie ilość powtórzeń/może ono trwać w nieskończoność, ale na koniec musimy dodać słowo kluczowe infinite*/
+  animation-direction: reverse;
+}
+
+.square:hover {
+  animation-play-state: paused; /*kolejna fajna rzecz, że jeśli najedziemy na daną animację to ją zatrzymujemy, a później jak już z niej zejdziemy to ruszą od tego momentu co ją zatrzymalismy */
+}
+
+.two {
+  animation-direction: alternate; /*to jest taka płynna animacja czyli przeskakuje 0% 50% 100% 50% 0%*/
+}
+
+.three {
+  animation-direction: alternate-reverse;
+}
+
+/*Rodzaje animacji: nazwa / czas / timing-function / delay / il. powtórzeń / fill mode*/
+@keyframes color {
+  0% {
+    background-color: gold;
+  }
+  50% {
+    width: 800px;
+    background-color: blue;
+  }
+  100% {
+    width: 200px;
+    background-color: lime;
+  }
+}
+.text {
+  position: absolute;
+  right: 20px;
+  line-height: 100px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #000;
+}
+
+.abc {
+  margin-bottom: 5px;
+  width: 50px;
+  height: 100px;
+  background-color: #000;
+  animation: test 2s;
+}
+
+.jeden {
+  animation-fill-mode: none;
+}
+
+.dwa {
+  animation-fill-mode: forwards; /*w tej animacji styl zostaje ktory zaprogramowaliśmy na 100% - on musi być ustawiony na 100%!*/
+}
+
+.trzy {
+  animation-fill-mode: backwards;
+}
+
+.cztery {
+  animation-fill-mode: both;
+}
+
+@keyframes test {
+  0% {
+    width: 50px;
+    background-color: lime;
+  }
+  50% {
+    background-color: royalblue;
+  }
+  100% {
+    width: 500px;
+    background-color: tomato;
+  }
+}
+.squaree {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.onee {
+  background-color: royalblue;
+  animation: bad 1s 2s 8 alternate;
+}
+
+.twoo {
+  background-color: lime;
+}
+
+.twoo::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 80px lime;
+  opacity: 0;
+  animation: good 1s 8 10s alternate;
+}
+
+@keyframes bad {
+  100% {
+    box-shadow: 0 0 80px royalblue;
+  }
+}
+@keyframes good {
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=animacje.css.map */

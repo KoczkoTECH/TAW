@@ -1,0 +1,324 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-padding-top: 53px;
+}
+
+body {
+  background-color: #ebecf2;
+}
+
+.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.underline {
+  margin: 0 auto 20px;
+  width: 60px;
+  height: 3px;
+  background-color: #039dff;
+}
+
+nav {
+  z-index: 1;
+  transition: background-color 1s;
+  color: #fff;
+  text-transform: uppercase;
+}
+nav span {
+  color: #039dff;
+}
+nav .navbar-toggler {
+  padding: 10px 15px;
+  border: none;
+}
+nav .navbar-brand {
+  font-weight: bold;
+}
+nav .fa-solid,
+nav .fa-solid::after,
+nav .fa-solid::before {
+  margin-right: 5px;
+}
+nav .nav-link,
+nav .navbar-nav,
+nav .navbar-brand,
+nav .fa-bars {
+  color: white;
+}
+nav .nav-link:focus,
+nav .nav-link:hover,
+nav .navbar-nav .nav-link.active,
+nav .navbar-brand:hover {
+  color: #039dff;
+}
+
+header.hero-img {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/playstation_small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  color: #fff;
+}
+header.hero-img span {
+  color: #039dff;
+}
+header.hero-img h1 {
+  text-transform: uppercase;
+}
+header.hero-img .hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -5;
+}
+header.hero-img .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header.hero-img .fa-chevron-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+  bottom: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+.aboutus i {
+  margin-top: 20px;
+  font-size: 30px;
+}
+.aboutus .aboutus-card-title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.aboutus .aboutus-card-title {
+  font-size: 14px;
+}
+.aboutus .aboutus-hover {
+  transition: color 0.3s;
+}
+.aboutus .aboutus-hover:hover {
+  color: #039dff;
+}
+
+.aboutus-hero {
+  position: relative;
+  background-image: url("../img/procesor_small.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ddd;
+  z-index: 0;
+}
+.aboutus-hero .aboutus-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -5;
+}
+.aboutus-hero .aboutus-hero-item {
+  margin: 10px 0;
+}
+.aboutus-hero .aboutus-hero-item i {
+  font-size: 36px;
+}
+.aboutus-hero .aboutus-hero-item .aboutus-hero-title {
+  font-size: 24px;
+}
+
+.portfolio .carousel-item {
+  height: 600px;
+}
+.portfolio .carousel-caption {
+  padding: 40px 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.portfolio .carousel-indicators {
+  padding-bottom: 20px;
+}
+
+.prices .price-box {
+  margin: 20px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+.prices .price-box span {
+  font-weight: bold;
+}
+.prices .price-box i {
+  padding: 0 5px;
+  font-size: 24px;
+}
+.prices .price-box button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.prices .price-title {
+  color: #039dff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+}
+.prices .price-box:hover {
+  transform: scale(1.05);
+}
+.prices .price-tag {
+  font-weight: bold;
+  font-size: 30px;
+}
+.prices .price-info {
+  margin-top: 30px;
+}
+.prices .price-info a {
+  text-decoration: none;
+}
+
+.team {
+  position: relative;
+  background-image: url("../img/building_big.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 5;
+}
+.team .section-title {
+  color: #ddd;
+}
+.team .team-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -5;
+}
+.team .card {
+  transition: scale 0.3s;
+}
+.team .card img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team .card i {
+  padding: 10px;
+}
+.team .card .card-text {
+  text-align: justify;
+}
+.team .card:hover {
+  scale: 0.96;
+}
+.team .card-title {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.team .card-body {
+  height: 100px;
+}
+
+.achievements-list {
+  padding: 20px 0;
+}
+.achievements-list i {
+  padding: 10px;
+  font-size: 48px;
+  color: white;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.achievements-list .achievement-number {
+  font-size: 22px;
+}
+.achievements-list .achievement-text {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  header.hero-img {
+    background-image: url("../img/playstation_big.jpg");
+  }
+  .aboutus-hero {
+    background-image: url("../img/procesor_big.jpg");
+  }
+  .hero-text h1 {
+    font-size: 42px;
+  }
+  .hero-text p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    scroll-padding-top: 44px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  text-align: center;
+  color: pink;
+  background-color: #ccc;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: black;
+}
+
+section {
+  height: 25vh;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  background-color: lime;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.odd {
+  background-color: yellow;
+}
+
+.even {
+  background-color: brown;
+}
+
+.pseudoklasy {
+  font-size: 5rem;
+  color: #000;
+}
+
+section ul li:nth-child(even) {
+  color: lime;
+}
+
+section div span:nth-of-type(1) {
+  color: red;
+}
+
+section div.test p:first-child {
+  color: red;
+}
+section div.test p:last-child {
+  color: orange;
+}
+
+.title:hover {
+  color: pink;
+}
+
+.title {
+  transition: color 1s;
+}
+
+.kwadrat {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  animation: kwa 4s;
+  animation-fill-mode: forwards;
+}
+
+.kolo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: green;
+  animation: kol 2s 4s;
+}
+
+@keyframes kwa {
+  0% {
+    background-color: red;
+  }
+  50% {
+    width: 600px;
+    height: 300px;
+  }
+  100% {
+    width: 300px;
+    height: 600px;
+    background-color: gold;
+  }
+}
+@keyframes kol {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: blue;
+  }
+}/*# sourceMappingURL=zadanie.css.map */

@@ -1,0 +1,286 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-color: #333;
+}
+
+.one {
+  display: flex;
+}
+
+.two {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.three {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.square {
+  display: flex; /*flex box nadajemy na rodzicu!!*/
+  justify-content: center; /*te 3 linijki sprawiają, że tekst jest idealnie wyśrodkowany*/
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  font-size: 50px;
+  background-color: gold;
+  border: 3px solid black;
+}
+
+section.justify-content {
+  display: flex;
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-between; /*taje miejsce pomiędzy, ale pierwszy i ostatni jest przyklejony do prawej i lewej krawędzi*/
+  justify-content: space-around; /*tutaj zastosowane są "marginesy" po bogach się sumują a skarnie prawy i lewy mają mniejszy odstęp*/
+  justify-content: space-evenly; /*odstępu od elementami są równiutkie*/
+  font-size: 36px;
+}
+
+.squaree {
+  width: 20%;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+}
+
+.jeden {
+  background-color: gold;
+}
+
+.dwa {
+  background-color: lime;
+}
+
+.trzy {
+  background-color: royalblue;
+}
+
+.cztery {
+  background-color: tomato;
+}
+
+p {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+section.align-items {
+  background-color: #678;
+  height: 600px;
+  display: flex;
+  align-items: stretch; /*domyślne ustawienie - divy są rozciągnięte po całości*/
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 36px;
+}
+
+.squareee {
+  width: 20%;
+  line-height: 200px;
+  text-align: center;
+}
+
+section.align-content {
+  height: 600px;
+  background: #678;
+  display: flex;
+  flex-wrap: wrap; /*wrap musi być jeśli chcemy pracować z align-content oraz posiadać dwa rzędy*/
+  font-size: 50px;
+  align-content: stretch; /*to jest wartość domyślna*/
+  align-content: flex-start;
+  align-content: flex-end;
+  align-content: center; /*wartości ma takie same jak justify-content*/
+}
+
+.kwadrat {
+  width: 25%;
+  text-align: center;
+}
+
+.osiem {
+  background-color: gold;
+}
+
+.siedem {
+  background-color: lime;
+}
+
+.szesc {
+  background-color: royalblue;
+}
+
+.piec {
+  background-color: tomato;
+}
+
+/*kod z zadania #2 poniżej*/
+section.zadanie {
+  margin: 20px 0;
+  height: 400px;
+  background-color: #789;
+  font-size: 50px;
+}
+
+.zsquare {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+}
+
+.zone {
+  background-color: gold;
+  /*mamy też coś takiego jak flex basis. Skrótow się go piszę tak: flex: 0 1 300px; czyli flex: grow shrink basis - nie wiem czy to będę stosować*/
+}
+
+.ztwo {
+  background-color: lime;
+}
+
+.zthree {
+  background-color: royalblue;
+}
+
+.self {
+  align-self: flex-start; /*tą własność nadajemy na dzieciach*/
+}
+
+.zfour {
+  background-color: tomato;
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.third {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section.growshrink {
+  display: flex;
+  font-size: 50px;
+}
+section.growshrink .zone {
+  flex-grow: 1; /*sprawia, że wypełnia do końca diva tym co chcemy*/
+}
+
+section.zadanietrzy {
+  display: flex;
+  margin: 50px;
+  height: 300px;
+  border: 5px solid black;
+  font-size: 40px;
+}
+
+.zasquare {
+  width: 200px;
+  text-align: center;
+}
+
+.zadjeden {
+  flex-direction: column;
+}
+
+.zadjeden .ztwo, .zadjeden .zfour {
+  flex-grow: 1;
+}
+
+.zaddwa {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.zadtrzy .zone {
+  flex-grow: 1;
+  order: 4;
+}
+.zadtrzy .zfour {
+  flex-grow: 3;
+  order: 2;
+}
+.zadtrzy .ztwo {
+  order: 3;
+}
+.zadtrzy .zthree {
+  order: 1;
+}
+
+.zadcztery {
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+.zadcztery .zthree {
+  align-self: center;
+}
+.zadcztery .ztwo {
+  align-self: flex-start;
+}/*# sourceMappingURL=flexbox.css.map */

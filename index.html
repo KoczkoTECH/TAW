@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ProGamers</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous" />
+			<script
+				src="https://kit.fontawesome.com/5a9db4d057.js"
+				crossorigin="anonymous"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+			<!--dodaliśmy klasę position-sticky oraz top-0, aby przykleić naszą nawigację-->
+
+			<!-- UPDATE - zamieniliśmy position-sticky na position-fixed - ponieważ chcieliśmy, aby nasz hero-grafika dolegała od samego początku. Postion-fixed wyrywa z  warstwy wizualnej oraz struktury strony czyli po prostu header nie widzi tego nava i dlatego podjeżdża do góry. W-100 natomiast sprawia, że dajemy width: 100%, bo przy posiotion-fixed mamy rozmiar taki ile mamy elementów -->
+			<div class="container">
+				<a class="navbar-brand" href="#"
+					><i class="fa-solid fa-headset">Pro<span>Gamers</span></i></a
+				>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<i class="fa-solid fa-bars"></i>
+					<!--Zastepujemy standardową ikonę tą z font-awesome-->
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav ms-auto">
+						<!--nadaliśmy klasę ms-auto, aby przenieść nasz navbar do prawej strony-->
+						<a class="nav-link active" aria-current="page" href="#home">Home</a>
+						<a class="nav-link" href="#aboutus">o nas</a>
+						<a class="nav-link" href="#portfolio">portfolio</a>
+						<a class="nav-link" href="#prices">ceny</a>
+						<a class="nav-link" href="#team">zespół</a>
+						<a class="nav-link" href="#achievements">osiągnięcia</a>
+						<a class="nav-link" href="#contact">kontakt</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<header class="hero-img" id="home">
+			<div class="hero-text text-center p-2">
+				<!--dodaliśmy klase text-center, bo na najmniejszym ekranie był po lewej stronie-->
+				<h1>Witajcie w Pro<span>Gamers</span></h1>
+				<p>W miejscu, gdzie gry tworzymy z pasją</p>
+				<a href="#aboutus" class="btn btn-outline-light mt-2 text-uppercase"
+					>Poznaj nas</a
+				>
+				<!--Wzięliśmy klase Outline buttons z bootstrapa i wyrzuciliśmy type="button", a sam tak zamieniliśmy na <a> dodatkowo dodaliśmy klasę mt-2 i text-uppercase-->
+			</div>
+			<div class="hero-shadow"></div>
+			<a href="#aboutus"><i class="fa-solid fa-chevron-down"></i></a>
+			<!--Ikona z font awesome wkleiliśmy jaki link w <a>-->
+		</header>
+		<main>
+			<section id="aboutus" class="aboutus bg-light py-5">
+				<div class="container">
+					<!--często się robi tak, że kontener znajduje się dopiero wewnątrz sekcji, ponieważ chcemy na środku content, a obraz, zdjęcie mogą wylewać się poza kontener-->
+
+					<h2 class="section-title">o nas</h2>
+					<div class="underline"></div>
+
+					<div class="row">
+						<div class="aboutus-hover col-sm-6 col-md-4 text-center">
+							<p><i class="fa-solid fa-mobile-screen"></i></p>
+							<p class="aboutus-card-title mb-1">mobile gaming</p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-card-text">
+								Tworzymy gry na urządzenia mobilne!
+							</p>
+						</div>
+						<div class="aboutus-hover col-sm-6 col-md-4 text-center">
+							<p><i class="fa-solid fa-desktop"></i></p>
+							<p class="aboutus-card-title mb-1">desktop gaming</p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-card-text">Tworzymy gry na PC!</p>
+						</div>
+						<div class="aboutus-hover col-sm-6 col-md-4 text-center">
+							<p><i class="fa-solid fa-file-code"></i></p>
+							<p class="aboutus-card-title mb-1">najwyższe standardy</p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-card-text">
+								Zachowujemy najwyższe standardy podczas pisania kodu.
+							</p>
+						</div>
+						<div class="aboutus-hover col-sm-6 col-md-4 text-center">
+							<p><i class="fa-solid fa-paw"></i></p>
+							<p class="aboutus-card-title mb-1">kochamy zwierzęta!</p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-card-text">
+								Wszystkie nasze gry są bezpieczne dla środowiska. :)
+							</p>
+						</div>
+						<div class="aboutus-hover col-sm-6 col-md-4 text-center">
+							<p><i class="fa-solid fa-burger"></i></p>
+							<p class="aboutus-card-title mb-1">lubimy dobre jedzenie</p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-card-text">
+								Lubimy dobrze zjeść przed przystąpieniem do naszych zadań.
+							</p>
+						</div>
+						<div class="aboutus-hover col-sm-6 col-md-4 text-center">
+							<p><i class="fa-solid fa-champagne-glasses"></i></p>
+							<p class="aboutus-card-title mb-1">świetne relacje</p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-card-text">
+								Zachowujemy świetne relacje z naszymi klientami!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="aboutus-hero py-5">
+				<div class="aboutus-shadow"></div>
+
+				<div class="container py-5">
+					<h2 class="section-title">tworzymy gry na platformie</h2>
+					<div class="underline"></div>
+					<div class="row">
+						<div class="aboutus-hero-item col-lg-4 text-center">
+							<p class="aboutus-hero-title mb-1">PC</p>
+							<p><i class="fa-brands fa-steam"></i></p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-hero-text">
+								Graj ze znajomymi na swoim blaszaku!
+							</p>
+						</div>
+						<div class="aboutus-hero-item col-lg-4 text-center">
+							<p class="aboutus-hero-title mb-1">PlayStation</p>
+							<p><i class="fa-brands fa-playstation"></i></p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-hero-text">
+								Gry świetnie prezentują się na konsoli od Sony!
+							</p>
+						</div>
+						<div class="aboutus-hero-item col-lg-4 text-center">
+							<p class="aboutus-hero-title mb-1">Xbox</p>
+							<p><i class="fa-brands fa-xbox"></i></p>
+							<!--mb-1 zmieniamy trochę margines, bo jest za daleko domyślnie w BOOSTRAP-->
+							<p class="aboutus-hero-text">
+								Fani Xboxa spędzą z nami mnóstwo godzin!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="portfolio bg-light py-5" id="portfolio">
+				<h2 class="section-title">Portfolio</h2>
+				<div class="underline"></div>
+
+				<div class="container">
+					<!--Poniżej wersja na mobile - to jest po to, żeby to dużo lepiej wyglądało-->
+
+					<div class="card-group d-lg-none">
+						<!--d-lg-none dajemy po to, aby nie powtórzyło się nam to co mamy poniżej z karuzeli-->
+						<div class="card me-3">
+							<img src="./img/auto_big.jpg" class="card-img-top" alt="auto" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									This is a wider card with supporting text below as a natural
+									lead-in to additional content. This content is a little bit
+									longer.
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<img src="./img/gaming_big.jpg" class="card-img-top" alt="gra" />
+							<div class="card-body">
+								<h5 class="card-title">Card title</h5>
+								<p class="card-text">
+									This card has supporting text below as a natural lead-in to
+									additional content.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!--Powyżej wersja na mobile-->
+					<!--Poniżej wersja na PC-->
+					<div
+						id="carouselExampleCaptions"
+						class="carousel slide d-none d-lg-block">
+						<!--Dajemy klase d-none, aby nam karuzela znikęła oraz d-lg-block, aby wyswietlała się dopiero dla dużych ekranów - nie na telefonach-->
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									src="./img/auto_big.jpg"
+									class="d-block w-100"
+									alt="Mercedes-Benz" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Racing GT</h5>
+									<p>
+										Some representative placeholder content for the first slide.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="./img/gaming_big.jpg"
+									class="d-block w-100"
+									alt="Gra" />
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Pro-X Fottball</h5>
+									<p>
+										Some representative placeholder content for the second
+										slide.
+									</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="prev">
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="next">
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="prices py-5 bg-light" id="prices">
+				<h2 class="section-title">CENNIK</h2>
+				<div class="underline"></div>
+
+				<div class="container">
+					<div class="row price-wrap text-center justify-content-center">
+						<!--normalnie nasze divy są elementami blokowymi, dlatego dajemy sobie klasę 'row', aby elementy były obok siebie. Dodatkowo daliśmy sobie tutaj klasę justify-content-center, która sprawia, że ta 3 karta będzie na środku jak zmniejszymy ekran. Bez tego była przyklejona do prawej strony-->
+						<div class="col-md-6 col-xl-4">
+							<div class="price-box">
+								<p class="price-title">mobile</p>
+								<hr />
+								<!--hr to taka kreska w html-->
+								<p>
+									<span>Urządzenia: </span><i class="fas fa-mobile-alt"></i>
+								</p>
+								<p><span>Długość gry: </span>Krótka</p>
+								<p><span>Grafika: </span>Średnia</p>
+								<p><span>Online: </span>Brak</p>
+								<p class="price-tag">499zł</p>
+								<button class="btn btn-secondary">Zamawiam</button>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-4">
+							<div class="price-box">
+								<p class="price-title">mobile & PC</p>
+								<hr />
+								<!--hr to taka kreska w html-->
+								<p>
+									<span>Urządzenia: </span><i class="fas fa-mobile-alt"></i> <i class="fas fa-desktop"></i></i>
+								</p>
+								<p><span>Długość gry: </span>Średnia</p>
+								<p><span>Grafika: </span>Ładna</p>
+								<p><span>Online: </span>Tak</p>
+								<p class="price-tag">2499zł</p>
+								<button class="btn btn-secondary">Zamawiam</button>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-4">
+							<div class="price-box">
+								<p class="price-title">full pack</p>
+								<hr />
+								<!--hr to taka kreska w html-->
+								<p>
+									<span>Urządzenia: </span><i class="fas fa-mobile-alt"></i> <i class="fas fa-desktop"></i>
+									<i class="fas fa-gamepad"></i></i>
+								</p>
+								<p><span>Długość gry: </span>Długa</p>
+								<p><span>Grafika: </span>Najlepsza</p>
+								<p><span>Online: </span>Tak</p>
+								<p class="price-tag">4999zł</p>
+								<button class="btn btn-secondary">Zamawiam</button>
+							</div>
+						</div>
+					</div>
+					<p class="price-info text-center">Skorzystaj z jednego z trzech głównych pakietów lub <a href="#contact">skontaktuj się</a> z nami i ustal warunki indywidualne!</p>
+					<p class="text-muted text-center">Pakiet <strong>FULL PACK</strong> zawiera wersję gier na urządzenia mobilne, PC oraz konsole.</p>
+				</div>
+			</section>
+			<section id="team" class="team py-5">
+				<h2 class="section-title">Zespół</h2>
+				<div class="underline"></div>
+				<div class="container">
+					<div class="card-group team-carousel">
+						<div class="card mx-3">
+							<img src="./img/team/adult_big.jpg" class="card-img-top" alt="Dorosły">
+							<div class="card-body">
+								<h5 class="card-title">CEO</h5>
+								<p class="card-text">Szef szefów. Nikt nie zna jego imienia. Podwładni mówią na niego "Pan Prezes".</p>
+							</div>
+							<div class="card-footer d-flex justify-content-around"> <!--aby wyśrodkować ikony używamy d-flex - jako flex box oraz justify-content-around-->
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+						<div class="card mx-3">
+							<img src="./img/team/woman_big.jpg" class="card-img-top" alt="kobita">
+							<div class="card-body">
+								<h5 class="card-title">HR</h5>
+								<p class="card-text">Paula zajmuje się rekrutowaniem młodych i gniewnych talentów.</p>
+							</div>
+							<div class="card-footer d-flex justify-content-around">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+						<div class="card mx-3">
+							<img src="./img/team/building_big.jpg" class="card-img-top" alt="budynek">
+							<div class="card-body">
+								<h5 class="card-title">Grafik</h5>
+								<p class="card-text">Pan Wiesio jest grafikiem z długoletnim stażem na L4</p>
+							</div>
+							<div class="card-footer d-flex justify-content-around">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+						<div class="card mx-3">
+								<img src="./img/team/entrepreneur_big.jpg" class="card-img-top" alt="coś tam">
+							<div class="card-body">
+								<h5 class="card-title">Tomek</h5>
+								<p class="card-text">To jest Tomek. Nikt oprócz prezesa nie wie, czym zajmuje się Tomek.</p>
+							</div>
+							<div class="card-footer d-flex justify-content-around">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+						<div class="card mx-3">
+							<img src="./img/team/women2_big.jpg" class="card-img-top" alt="kobita2">
+							<div class="card-body">
+								<h5 class="card-title">KJ</h5>
+								<p class="card-text">Ania i Hania sprawdzają starannie każdy nasz produkt</p>
+							</div>
+							<div class="card-footer d-flex justify-content-around">
+								<!-- a[href="#"]*3>i.fab.fa- -->
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="team-shadow"></div>
+			</section>
+			<section id="achievements" class="achievements py-5">
+				<h2 class="section-title">Osiągnięcia</h2>
+				<div class="underline"></div>
+				<div class="container">
+					<div class="row text-center achievements-list">
+						<div class="col-md-6 col-lg-4 col-xl-2">
+                        <i class="fas fa-thumbs-up"></i>
+                        <p class="achievement-number">100%</p>
+                        <p class="achievement-text">zadowolonych klientów</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <i class="fas fa-trophy"></i>
+                        <p class="achievement-number">37</p>
+                        <p class="achievement-text">zdobytych nagród</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <i class="fas fa-user-friends"></i>
+                        <p class="achievement-number">143</p>
+                        <p class="achievement-text">pracowników</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <i class="far fa-building"></i>
+                        <p class="achievement-number">7</p>
+                        <p class="achievement-text">nowoczesnych biur</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <i class="fas fa-dice"></i>
+                        <p class="achievement-number">58</p>
+                        <p class="achievement-text">stworzonych gier</p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-2">
+                        <i class="fas fa-share-alt"></i>
+                        <p class="achievement-number">80.000</p>
+                        <p class="achievement-text">fanów w social media</p>
+                    </div>
+					</div>
+				</div>
+			</section>
+			<section id="contact" class="contact py-5">
+				<h2 class="section-title">Kontakt</h2>
+				<div class="underline"></div>
+				<div class="container">
+					<div class="row text-center contact-us">
+						<div class="col-sm-6 col-lg-4 contact-item">
+							<h3>Główna siedziba</h3>
+							<p>ul. Sezamkowa 0</p>
+							<p>00-000 Kraków</p>
+							<p>+48 000 000 000</p>
+							<p>mail@mail.pl</p>
+						</div>
+						<div class="col-lg-4">
+							<h3>Social media</h3>
+							<div class="social-media">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+						<div class="col-sm-6 col-lg-4 contact-item">
+							<h3>Główna siedziba</h3>
+							<p>Milk Street 0</p>
+							<p>00-000 London</p>
+							<p>+44 000 000 000</p>
+							<p>mail@mail.com</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+			integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+			crossorigin="anonymous"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="./js/slick.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 50px;
+  font-size: 30px;
+  color: #fff;
+  background-color: #333;
+}
+
+div {
+  margin: 50px;
+}
+
+p:first-child {
+  color: lime;
+}
+
+p:last-child {
+  color: gold;
+}
+
+p:first-of-type {
+  color: blue;
+}
+
+p:last-of-type {
+  color: brown;
+}
+
+table,
+tr,
+td {
+  border: 1px solid black;
+}
+
+td {
+  width: 300px;
+  height: 100px;
+}
+
+p:nth-child(6) {
+  color: lime;
+}
+
+table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+
+section p:nth-of-type(2n+1) {
+  color: gold;
+}/*# sourceMappingURL=pseudoklasy.css.map */
